@@ -32,6 +32,7 @@
   },
   "addons": [
   ],
+  "stack": "container",
   "buildpacks": [{
     "url": "heroku/python"
   }],
