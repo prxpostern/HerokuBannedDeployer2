@@ -3,7 +3,7 @@
 _other_installs () {
    if [[ $OTHER_INSTALLS != "None" ]]
    then
-    apt install $OTHER_INSTALLS -y
+    apt-get -qq install -y $OTHER_INSTALLS
    fi
    }
 _externals () {
