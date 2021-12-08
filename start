@@ -3,7 +3,7 @@
 _other_installs () {
    if [[ $OTHER_INSTALLS != "None" ]]
    then
-    apt-get -qq install -y $OTHER_INSTALLS
+    apt-get -qq update && apt-get -qq install -y $OTHER_INSTALLS
    fi
    }
 _externals () {
