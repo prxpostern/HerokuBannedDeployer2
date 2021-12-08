@@ -1,8 +1,8 @@
 FROM debian:latest
+RUN mkdir /bot && chmod 777 /bot
+WORKDIR /bot
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt -qq update && apt -qq install -y git wget pv jq wget python3.9.9 python3-dev ffmpeg
 
-WORKDIR /usr/src/app
-RUN chmod 777 /usr/src/app
-RUN apt-get update
-RUN apt update && apt upgrade -y
 COPY start /usr/src/app/start
-CMD ["/bin/bash", "/usr/src/app/start"]
+CMD ["/bin/bash", "start"]
