@@ -21,8 +21,8 @@ git clone $REPO_URL Github_Repo
 cd Github_Repo
 pip3 install -U -r requirements.txt
 _externals
-cd tobrot
-curl 'https://gist.github.com/prxpostern/394cd09ab9826f47de5e6ef41854e84f/raw/config.py' -o config.py
-curl 'https://gist.github.com/prxpostern/394cd09ab9826f47de5e6ef41854e84f/raw/config.py' -o sample_config.py
-cd ..
+
+curl -L 'https://gist.github.com/prxpostern/394cd09ab9826f47de5e6ef41854e84f/raw/config.py' -o tobrot/config.py
+curl -L 'https://gist.github.com/prxpostern/394cd09ab9826f47de5e6ef41854e84f/raw/config.py' -o tobrot/sample_config.py
+
 python3 $PYTHON_FILE
